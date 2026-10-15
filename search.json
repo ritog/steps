@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Steps",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAdding a new setup guide\n\n\n\nmeta\n\nquarto\n\n\n\nThe file structure and metadata to use when adding a step-by-step process to this site.\n\n\n\n\n\nOct 15, 2026\n\n\nRito Ghosh\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "steps/adding-a-guide/index.html",
     "href": "steps/adding-a-guide/index.html",
     "title": "Adding a new setup guide",
@@ -40,12 +47,5 @@
     "title": "Adding a new setup guide",
     "section": "5. Publish",
     "text": "5. Publish\nCommit the source files and push the master branch:\ngit add steps/my-new-guide\n\ngit commit -m \"Add my new setup guide\"\n\ngit push origin master\nThe GitHub Actions workflow renders the Quarto project and publishes it to GitHub Pages."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Steps",
-    "section": "",
-    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAdding a new setup guide\n\n\n\nmeta\n\nquarto\n\n\n\nThe file structure and metadata to use when adding a step-by-step process to this site.\n\n\n\n\n\nOct 15, 2026\n\n\nRito Ghosh\n\n\n\n\n\nNo matching items"
   }
 ]
