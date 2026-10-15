@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Steps by Rito Ghosh</title>
+<link>https://ritog.github.io/steps/</link>
+<atom:link href="https://ritog.github.io/steps/index.xml" rel="self" type="application/rss+xml"/>
+<description>Step-by-step notes for setting up tools, services, and development environments.</description>
+<generator>quarto-1.10.18</generator>
+<lastBuildDate>Wed, 14 Oct 2026 18:30:00 GMT</lastBuildDate>
+<item>
+  <title>Adding a new setup guide</title>
+  <dc:creator>Rito Ghosh</dc:creator>
+  <link>https://ritog.github.io/steps/steps/adding-a-guide/</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<p>This site keeps each setup process in its own directory. That makes it easy to keep screenshots, scripts, and downloadable files next to the guide that uses them.</p>
+<section id="create-a-directory" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-directory">1. Create a directory</h2>
+<p>Create a short, URL-friendly directory under <code>steps/</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">mkdir</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-p</span> steps/my-new-guide</span></code></pre></div></div>
+<p>Use lowercase words separated by hyphens. Once a guide is published, avoid renaming its directory so existing links continue to work.</p>
+</section>
+<section id="add-the-guide" class="level2">
+<h2 class="anchored" data-anchor-id="add-the-guide">2. Add the guide</h2>
+<p>Create <code>steps/my-new-guide/index.qmd</code> with this front matter:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">---</span></span>
+<span id="cb2-2"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">title</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Set up the thing"</span></span>
+<span id="cb2-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">description</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"What the reader will have working by the end."</span></span>
+<span id="cb2-4"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">author</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Rito Ghosh"</span></span>
+<span id="cb2-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">date</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"2026-10-15"</span></span>
+<span id="cb2-6"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">categories</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">[</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">tool-name</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">,</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> setup</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">]</span></span>
+<span id="cb2-7"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">toc</span><span class="kw" style="color: #003B4F;
+background-color: null;
+font-weight: bold;
+font-style: inherit;">:</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;"> </span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">true</span></span>
+<span id="cb2-8"><span class="pp" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">---</span></span></code></pre></div></div>
+<p>Then write the process using numbered level-two headings:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">## 1. Install the dependency</span></span>
+<span id="cb3-2"></span>
+<span id="cb3-3">Explain the step and show the command.</span>
+<span id="cb3-4"></span>
+<span id="cb3-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">## 2. Configure the service</span></span>
+<span id="cb3-6"></span>
+<span id="cb3-7">Explain the next step.</span>
+<span id="cb3-8"></span>
+<span id="cb3-9"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">## 3. Verify the setup</span></span>
+<span id="cb3-10"></span>
+<span id="cb3-11">Show how the reader can confirm that everything works.</span></code></pre></div></div>
+</section>
+<section id="keep-commands-reproducible" class="level2">
+<h2 class="anchored" data-anchor-id="keep-commands-reproducible">3. Keep commands reproducible</h2>
+<p>Use fenced code blocks and name the language where possible:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```bash</span></span>
+<span id="cb4-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">command</span> <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">--flag</span> value</span>
+<span id="cb4-3"><span class="in" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">```</span></span></code></pre></div></div>
+<p>State where each command should run, call out values that must be replaced, and include the expected result after important steps.</p>
+</section>
+<section id="preview-locally" class="level2">
+<h2 class="anchored" data-anchor-id="preview-locally">4. Preview locally</h2>
+<p>From the repository root, run:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><span class="ex" style="color: null;
+background-color: null;
+font-style: inherit;">quarto</span> preview</span></code></pre></div></div>
+<p>Quarto rebuilds the site as files change. Confirm that the guide appears on the home page, its category links work, and all commands and links are correct.</p>
+</section>
+<section id="publish" class="level2">
+<h2 class="anchored" data-anchor-id="publish">5. Publish</h2>
+<p>Commit the source files and push the <code>master</code> branch:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource bash number-lines code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> add steps/my-new-guide</span>
+<span id="cb6-2"></span>
+<span id="cb6-3"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> commit <span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">-m</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"Add my new setup guide"</span></span>
+<span id="cb6-4"></span>
+<span id="cb6-5"><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">git</span> push origin master</span></code></pre></div></div>
+<p>The GitHub Actions workflow renders the Quarto project and publishes it to GitHub Pages.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>meta</category>
+  <category>quarto</category>
+  <guid>https://ritog.github.io/steps/steps/adding-a-guide/</guid>
+  <pubDate>Wed, 14 Oct 2026 18:30:00 GMT</pubDate>
+</item>
+</channel>
+</rss>

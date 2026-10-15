@@ -1,0 +1,51 @@
+[
+  {
+    "objectID": "steps/adding-a-guide/index.html",
+    "href": "steps/adding-a-guide/index.html",
+    "title": "Adding a new setup guide",
+    "section": "",
+    "text": "This site keeps each setup process in its own directory. That makes it easy to keep screenshots, scripts, and downloadable files next to the guide that uses them."
+  },
+  {
+    "objectID": "steps/adding-a-guide/index.html#create-a-directory",
+    "href": "steps/adding-a-guide/index.html#create-a-directory",
+    "title": "Adding a new setup guide",
+    "section": "1. Create a directory",
+    "text": "1. Create a directory\nCreate a short, URL-friendly directory under steps/:\nmkdir -p steps/my-new-guide\nUse lowercase words separated by hyphens. Once a guide is published, avoid renaming its directory so existing links continue to work."
+  },
+  {
+    "objectID": "steps/adding-a-guide/index.html#add-the-guide",
+    "href": "steps/adding-a-guide/index.html#add-the-guide",
+    "title": "Adding a new setup guide",
+    "section": "2. Add the guide",
+    "text": "2. Add the guide\nCreate steps/my-new-guide/index.qmd with this front matter:\n---\ntitle: \"Set up the thing\"\ndescription: \"What the reader will have working by the end.\"\nauthor: \"Rito Ghosh\"\ndate: \"2026-10-15\"\ncategories: [tool-name, setup]\ntoc: true\n---\nThen write the process using numbered level-two headings:\n## 1. Install the dependency\n\nExplain the step and show the command.\n\n## 2. Configure the service\n\nExplain the next step.\n\n## 3. Verify the setup\n\nShow how the reader can confirm that everything works."
+  },
+  {
+    "objectID": "steps/adding-a-guide/index.html#keep-commands-reproducible",
+    "href": "steps/adding-a-guide/index.html#keep-commands-reproducible",
+    "title": "Adding a new setup guide",
+    "section": "3. Keep commands reproducible",
+    "text": "3. Keep commands reproducible\nUse fenced code blocks and name the language where possible:\n```bash\ncommand --flag value\n```\nState where each command should run, call out values that must be replaced, and include the expected result after important steps."
+  },
+  {
+    "objectID": "steps/adding-a-guide/index.html#preview-locally",
+    "href": "steps/adding-a-guide/index.html#preview-locally",
+    "title": "Adding a new setup guide",
+    "section": "4. Preview locally",
+    "text": "4. Preview locally\nFrom the repository root, run:\nquarto preview\nQuarto rebuilds the site as files change. Confirm that the guide appears on the home page, its category links work, and all commands and links are correct."
+  },
+  {
+    "objectID": "steps/adding-a-guide/index.html#publish",
+    "href": "steps/adding-a-guide/index.html#publish",
+    "title": "Adding a new setup guide",
+    "section": "5. Publish",
+    "text": "5. Publish\nCommit the source files and push the master branch:\ngit add steps/my-new-guide\n\ngit commit -m \"Add my new setup guide\"\n\ngit push origin master\nThe GitHub Actions workflow renders the Quarto project and publishes it to GitHub Pages."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Steps",
+    "section": "",
+    "text": "Order By\n      Default\n      \n        Title\n      \n      \n        Date - Oldest\n      \n      \n        Date - Newest\n      \n      \n        Author\n      \n    \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nAdding a new setup guide\n\n\n\nmeta\n\nquarto\n\n\n\nThe file structure and metadata to use when adding a step-by-step process to this site.\n\n\n\n\n\nOct 15, 2026\n\n\nRito Ghosh\n\n\n\n\n\nNo matching items"
+  }
+]
