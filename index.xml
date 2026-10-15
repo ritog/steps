@@ -6,15 +6,15 @@
       version="2.0">
 <channel>
 <title>Steps by Rito Ghosh</title>
-<link>https://ritog.github.io/steps/</link>
-<atom:link href="https://ritog.github.io/steps/index.xml" rel="self" type="application/rss+xml"/>
+<link>https://ritoghosh.com/steps/</link>
+<atom:link href="https://ritoghosh.com/steps/index.xml" rel="self" type="application/rss+xml"/>
 <description>Step-by-step notes for setting up tools, services, and development environments.</description>
 <generator>quarto-1.10.19</generator>
 <lastBuildDate>Thu, 15 Oct 2026 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Adding a new setup guide</title>
   <dc:creator>Rito Ghosh</dc:creator>
-  <link>https://ritog.github.io/steps/steps/adding-a-guide/</link>
+  <link>https://ritoghosh.com/steps/steps/adding-a-guide/</link>
   <description><![CDATA[ 
 
 
@@ -181,7 +181,7 @@ font-style: inherit;">git</span> push origin master</span></code></pre></div></d
  ]]></description>
   <category>meta</category>
   <category>quarto</category>
-  <guid>https://ritog.github.io/steps/steps/adding-a-guide/</guid>
+  <guid>https://ritoghosh.com/steps/steps/adding-a-guide/</guid>
   <pubDate>Thu, 15 Oct 2026 00:00:00 GMT</pubDate>
 </item>
 </channel>
