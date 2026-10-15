@@ -1,0 +1,47 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - fonts/**
+
+website:
+  title: "Steps by Rito Ghosh"
+  site-url: "https://ritog.github.io/steps/"
+  description: "Step-by-step notes for setting up tools, services, and development environments."
+  search: true
+  navbar:
+    left:
+      - text: "Rito Ghosh"
+        href: https://ritoghosh.com/
+    right:
+      - text: "Steps"
+        href: index.qmd
+      - icon: github
+        aria-label: GitHub
+        href: https://github.com/ritog/steps
+      - icon: rss
+        aria-label: RSS
+        href: index.xml
+  page-footer:
+    left: "© Rito Ghosh"
+    right:
+      - text: "ritoghosh.com"
+        href: https://ritoghosh.com/
+
+format:
+  html:
+    theme:
+      dark: solar
+      light: lumen
+    mainfont: "Courier Prime"
+    monofont: "Cascadia Code"
+    css: styles.css
+    anchor-sections: true
+    code-line-numbers: true
+    code-copy: true
+    html-math-method:
+      method: katex
+      url: "https://cdn.jsdelivr.net/npm/katex@0.18.1/dist/"
+
+execute:
+  freeze: auto

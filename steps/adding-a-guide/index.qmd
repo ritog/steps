@@ -1,0 +1,87 @@
+---
+title: "Adding a new setup guide"
+description: "The file structure and metadata to use when adding a step-by-step process to this site."
+author: "Rito Ghosh"
+date: "2026-10-15"
+categories: [meta, quarto]
+toc: true
+---
+
+This site keeps each setup process in its own directory. That makes it easy to keep screenshots, scripts, and downloadable files next to the guide that uses them.
+
+## 1. Create a directory
+
+Create a short, URL-friendly directory under `steps/`:
+
+```bash
+mkdir -p steps/my-new-guide
+```
+
+Use lowercase words separated by hyphens. Once a guide is published, avoid renaming its directory so existing links continue to work.
+
+## 2. Add the guide
+
+Create `steps/my-new-guide/index.qmd` with this front matter:
+
+```yaml
+---
+title: "Set up the thing"
+description: "What the reader will have working by the end."
+author: "Rito Ghosh"
+date: "2026-10-15"
+categories: [tool-name, setup]
+toc: true
+---
+```
+
+Then write the process using numbered level-two headings:
+
+```markdown
+## 1. Install the dependency
+
+Explain the step and show the command.
+
+## 2. Configure the service
+
+Explain the next step.
+
+## 3. Verify the setup
+
+Show how the reader can confirm that everything works.
+```
+
+## 3. Keep commands reproducible
+
+Use fenced code blocks and name the language where possible:
+
+````markdown
+```bash
+command --flag value
+```
+````
+
+State where each command should run, call out values that must be replaced, and include the expected result after important steps.
+
+## 4. Preview locally
+
+From the repository root, run:
+
+```bash
+quarto preview
+```
+
+Quarto rebuilds the site as files change. Confirm that the guide appears on the home page, its category links work, and all commands and links are correct.
+
+## 5. Publish
+
+Commit the source files and push the `master` branch:
+
+```bash
+git add steps/my-new-guide
+
+git commit -m "Add my new setup guide"
+
+git push origin master
+```
+
+The GitHub Actions workflow renders the Quarto project and publishes it to GitHub Pages.
