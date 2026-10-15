@@ -6,7 +6,7 @@ project:
 
 website:
   title: "Steps by Rito Ghosh"
-  site-url: "https://ritog.github.io/steps/"
+  site-url: "https://ritoghosh.com/steps/"
   description: "Step-by-step notes for setting up tools, services, and development environments."
   search: true
   navbar:

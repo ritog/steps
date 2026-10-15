@@ -40,6 +40,6 @@ The listing in `index.qmd` discovers guides automatically.
 
 Pushing to `master` triggers [`.github/workflows/publish.yml`](.github/workflows/publish.yml), which renders the project and publishes it to the `gh-pages` branch.
 
-For the current `ritog/steps` remote, the expected project-site URL is:
+The published site is available at:
 
-<https://ritog.github.io/steps/>
+<https://ritoghosh.com/steps/>
